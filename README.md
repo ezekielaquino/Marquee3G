@@ -1,5 +1,10 @@
-#Marquee3G
-A Work in Progress™ but it's working. If you want to use it in its current state just do the following:
+# Marquee3G
+There's Marquee3K, but this one's `3G`.
+A Work in Progress™ but it's working.
+
+There's a vanila/non-GSAP version: [Marquee3000](https://github.com/ezekielaquino/Marquee3000)
+
+If you want to use it in its current state just do the following:
 
 **A Marquee's HTML must be structured like:**
 ```html
