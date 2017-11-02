@@ -117,22 +117,17 @@ class Marquee {
 
   static init(options) {
     window.Marquees = {};
-    const elems = document.querySelectorAll(options.selector || '.marquee');
+    const elems = [...document.querySelectorAll(options.selector || '.marquee')];
 
-    _init();
+    elems.forEach(marquee => {
+      const instance = new Marquee({
+        element: marquee,
+        gsap: options.gsap
+      });
 
-    function _init() {
-      for (let i = 0; i < elems.length; i++) {
-        const marquee = elems[i];
-        const instance = new Marquee({
-          element: marquee,
-          gsap: options.gsap
-        });
-
-        instance.index = i;
-        window.Marquees[i] = instance;
-      }
-    }
+      instance.index = i;
+      window.Marquees[i] = instance;
+    });
   }
 }
 
