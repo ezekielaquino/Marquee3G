@@ -119,7 +119,7 @@ class Marquee {
     window.Marquees = {};
     const elems = [...document.querySelectorAll(options.selector || '.marquee')];
 
-    elems.forEach(marquee => {
+    elems.forEach((marquee, i) => {
       const instance = new Marquee({
         element: marquee,
         gsap: options.gsap
